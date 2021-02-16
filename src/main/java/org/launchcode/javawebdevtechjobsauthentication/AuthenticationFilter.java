@@ -23,7 +23,7 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
 
     private static final List<String> whitelist = Arrays.asList("/login", "/register", "/logout", "/css");
 
-    //approvedList rather than whitelist might be better term to use
+    //approvedList rather than whitelist might be better term to use or isApproved or allowedList
     private static boolean isWhitelisted(String path) {
         for (String pathRoot : whitelist) {
             if (path.startsWith(pathRoot)) {
